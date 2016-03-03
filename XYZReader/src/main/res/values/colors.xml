@@ -24,7 +24,8 @@
     <color name="secondary_text">#727272</color>
     <color name="icons">#FFFFFF</color>
     <color name="divider">#B6B6B6</color>
+    <color name="text_light">#FFFFFF</color>
+    <color name="text_subheader">#8FFF</color>
 
     <color name="photo_placeholder">#ccc</color>
-    <color name="ltgray">#ffe0e0e0</color>
 </resources>

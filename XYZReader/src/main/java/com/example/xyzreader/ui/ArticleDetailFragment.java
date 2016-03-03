@@ -178,9 +178,11 @@ public class ArticleDetailFragment extends Fragment implements
         }
 
         TextView titleView = (TextView) mRootView.findViewById(R.id.article_title);
-        TextView bylineView = (TextView) mRootView.findViewById(R.id.article_byline);
-        bylineView.setMovementMethod(new LinkMovementMethod());
+        TextView dateView = (TextView) mRootView.findViewById(R.id.article_date);
+        TextView authorView = (TextView) mRootView.findViewById(R.id.article_author);
         TextView bodyView = (TextView) mRootView.findViewById(R.id.article_body);
+
+        // I am leaving this font, it is not default, but it is free and in my opinion it looks nice
         bodyView.setTypeface(Typeface.createFromAsset(getResources().getAssets(), "Rosario-Regular.ttf"));
 
         if (mCursor != null) {
@@ -220,7 +222,6 @@ public class ArticleDetailFragment extends Fragment implements
         } else {
             mRootView.setVisibility(View.GONE);
             titleView.setText("N/A");
-            bylineView.setText("N/A" );
             bodyView.setText("N/A");
         }
     }
