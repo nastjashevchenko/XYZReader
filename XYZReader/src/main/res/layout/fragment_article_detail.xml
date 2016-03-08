@@ -9,7 +9,7 @@
         android:id="@+id/photo"
         android:layout_width="match_parent"
         android:scaleType="centerCrop"
-        android:layout_height="match_parent" />
+        android:layout_height="@dimen/detail_photo_height"/>
 
     <com.example.xyzreader.ui.ObservableScrollView
         android:id="@+id/scrollview"
@@ -46,14 +46,10 @@
 
                     <TextView
                         android:id="@+id/article_title"
-                        style="?android:attr/textAppearanceLarge"
+                        style="@style/header"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingBottom="@dimen/detail_metabar_title_bottom_padding"
-                        android:fontFamily="sans-serif-condensed"
-                        android:textStyle="bold"
-                        android:textColor="@color/text_light"
-                        android:textSize="@dimen/detail_title_text_size"
                         android:lineSpacingMultiplier="0.9" />
                     <LinearLayout
                         android:layout_width="wrap_content"

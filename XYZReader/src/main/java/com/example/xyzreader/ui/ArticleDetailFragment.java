@@ -42,6 +42,7 @@ public class ArticleDetailFragment extends Fragment implements
     private ImageView mPhotoView;
     private int mScrollY;
     private boolean mIsCard = false;
+    float mScrollStoppedY = 0;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -95,8 +96,16 @@ public class ArticleDetailFragment extends Fragment implements
             @Override
             public void onScrollChanged() {
                 mScrollY = mScrollView.getScrollY();
-                getActivityCast().onUpButtonFloorChanged(mItemId, ArticleDetailFragment.this);
-                mPhotoView.setTranslationY(-1 * (int) (mScrollY - mScrollY / PARALLAX_FACTOR));
+
+                // When scrolling need to find scrollY when stop moving background image
+                // Once we found this point, we can use it to understand if want to move image or not
+                if ((Math.abs(mPhotoView.getTranslationY()) > mPhotoView.getHeight() * 0.3)
+                        && (mScrollStoppedY == 0)) mScrollStoppedY = mScrollY;
+
+                if (mScrollStoppedY == 0 || mScrollY < mScrollStoppedY) {
+                    getActivityCast().onUpButtonFloorChanged(mItemId, ArticleDetailFragment.this);
+                    mPhotoView.setTranslationY(-1 * (int) (mScrollY - mScrollY / PARALLAX_FACTOR));
+                }
             }
         });
 
