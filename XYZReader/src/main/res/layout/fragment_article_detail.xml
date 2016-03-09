@@ -29,7 +29,7 @@
                 android:background="#fff"
                 android:id="@+id/article_container"
                 android:elevation="2dp"
-                android:layout_marginTop="300dp">
+                android:layout_marginTop="@dimen/metabar_margin_top">
 
                 <LinearLayout
                     android:id="@+id/meta_bar"
