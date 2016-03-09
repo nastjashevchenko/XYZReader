@@ -11,7 +11,9 @@ Application uses Android Support design library and widgets such as:
 ## Final result
 
 Smartphone list and article screens:
+
 ![List View](http://i.imgur.com/ElR0FHd.gif) ![Detail View](http://i.imgur.com/WFOVBRC.gif)
 
 Tablet article screen:
+
 ![Tablet detailed view](http://i.imgur.com/8K0PgLF.png)
