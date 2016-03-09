@@ -10,4 +10,8 @@ Application uses Android Support design library and widgets such as:
 
 ## Final result
 
-<img src='http://i.imgur.com/MwrR1DO.gifv' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+Smartphone walkthrough:
+<img src='http://i.imgur.com/MwrR1DO.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+Tablet article screen:
+<img src='http://i.imgur.com/8K0PgLF.png'>
